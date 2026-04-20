@@ -1,0 +1,22 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches: ["*"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Verificar arquivos do projeto
+        run: |
+          echo "Verificando arquivos..."
+          ls -la
+          test -f index.html && echo "✅ index.html encontrado"
+          test -f style.css && echo "✅ style.css encontrado"
+          echo "✅ CI concluído com sucesso!"
