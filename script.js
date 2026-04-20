@@ -1,10 +1,4 @@
 // script.js
-// integração com API será adicionada no próximo branch
-function buscarClima() {
-    console.log("em breve...");
-}
-
-// script.js
 async function buscarClima() {
     const cidade = document.getElementById("city").value;
 
